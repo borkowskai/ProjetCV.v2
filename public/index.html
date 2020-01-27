@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="web developer portfolio" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- LIbrary pour formulaire dans l'email gratuit -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <title>Izabela Borkowska Junior Full Stack Developernpm rebuild node-sass</title>
+
+	</head>
+
+  <!-----------    bootstrap solution for scroll spy ---------->
+	<!-- <body data-spy="scroll" data-target="#navigation" data-offset="50"> -->
+<body data-active="true">
+		<!--***************************************************** Navbar **********************************************-->
+		<div class="fixee">
+			<nav class="navbar navbar-expand-md" id="navigation">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler custom-toggler btnDown" 
+          type="button" data-toggle="collapse" 
+          data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+        </button>
+	      <div class="container">
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav mr-auto w-100 justify-content-between">
+              <li class="nav-item">
+                <a class="nav-link" href="#about-me">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#web-dev">Web Developement</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#experience">Experience</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#education">Education</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#formulaire">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+			</nav>
+    </div>
+
+
+    <!-- ************************************** About Me top part*********************************************-->
+
+    <!-- About Me top part-->
+    <div class="container">
+		  <section id="about-me">
+				<div class="about-me d-flex flex-column justify-content-between">
+					<div class="row texte">
+						<div class="col-12 col-lg-7">
+							<h2>Izabela Borkowska</h2>
+							<h1>Junior Full Stack Developer</h1>
+						</div>
+						<div class="col-12 col-lg-5">
+							<p>After 1o years exploring the world of logistic, <br>
+								I decided to come back to school for a professional reorientation.<br>
+								Beetween big choice I choosed the IT Developement.<br><br>
+								Currently I'm looking for an Internship of 6- 8 weeks<br>
+								from 4 May 2020 to 26 June 2020</p>
+						</div>
+					</div>
+          <div id="droneSpace">
+            
+          </div>
+      <!-- 1st part ABOUT ME DOWN-->
+          <div class="row">
+              <div class="col-12 col-lg-7"></div>
+              <div class="icons col-12 col-lg-5">
+                <div class="links d-flex justify-content-around" id="links">
+                  <a href="https://github.com/borkowskai" target="_blank" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i>Portfolio</a>
+                  <a href="https://www.linkedin.com/in/izabela-borkowska-9625ba90/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin-square" aria-hidden="true"></i>Profil</a>
+                  <a href="assets/images/CVIzabelaBorkowska.pdf" target="_blank" title="LinkedIn"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>CV</a>
+                </div>
+              </div>
+          </div>
+           
+        </div>
+ 
+      </section>	
+    
+    <!--2nd ************************************* part WEB-DEVELOPEMENT ****************************************-->
+      <section id="web-dev">
+        <div class="web-dev container2 d-flex flex-column  flex-md-row justify-content-around">
+
+          <!--------------------- FRONT END -------------------->
+            <div class="elargir" id="front-end" data-child="1">
+                <div class="exterior">
+                  <i class="fa fa-laptop" aria-hidden="true"></i>
+                  <h3>Front-end</h3>
+                  <img src="https://freepngimg.com/download/mouse_cursor_click/1-2-click-free-download-png.png" class="click-animate" />
+                 
+                </div>
+                <div class="interior " style="display: none">
+                  <!-- -------- added row for btn close + title -------- -->
+                  <div class="row">
+                    <div class="col">
+                      <!-- data se refere a tout ce que l'on veut, ici a id de la div -->
+                      <button type="button" data-target="front-end" class="close pull-right" id="btnClose"><i class="fa fa-times" aria-hidden="true"></i></button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <h3 class="text-center">Front-end</h3>
+                    </div>
+                  </div>
+                  <!-- ------------ icons language parts --------------- -->
+                  <div class="row">
+                    <div class="col language">
+                      <h4 class="text-center">JavaScript JQuery Ajax </h4>
+                      <h5 class="text-center">Angular / React Bootstrap HTML CSS</h5>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!--------------------- BACK END -------------------->
+            <div class="elargir" id="back-end" data-child="2">
+              <div class="exterior mx-auto">
+                <i class="fa fa-code" aria-hidden="true"></i>
+                <h3>Back-end</h3>
+                <img src="https://freepngimg.com/download/mouse_cursor_click/1-2-click-free-download-png.png" class="click-animate" />
+              </div>
+              <div class="interior" style="display: none">
+                <!-- -------- added row for btn close + title -------- -->
+                <div class="row">
+                  <div class="col">
+                    <button type="button" data-target="back-end" class="close pull-right" id="btnClose"><i class="fa fa-times" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h3 class="text-center">Back-end</h3>
+                  </div>
+                </div>
+                <!-- ------------ icons language parts --------------- -->
+                <div class="row">
+                  <div class="col language">
+                    <h4 class="text-center">C# ASP.NET SQLServer</h4>
+                    <h4 class="text-center">PHP Symfony MySQL</h4>
+                    <h5 class="text-center">Ionic</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--------------------- PROJECT PREPARATION -------------------->
+            <div class="elargir" id="projectsPrep" data-child="3">
+              <div class="exterior mx-auto">
+                <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                <h3 class="text-wrap">Projects Preparation</h3>
+                <img src="https://freepngimg.com/download/mouse_cursor_click/1-2-click-free-download-png.png" class="click-animate" />
+              </div>
+              <div class="interior" style="display: none">
+                <!-- -------- added row for btn close + title -------- -->
+                <div class="row">
+                  <div class="col">
+                    <button type="button" data-target="projectsPrep" class="close pull-right" id="btnClose"><i class="fa fa-times" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <h3 class="text-center">Projects Preparation</h3>
+                  </div>
+                </div>
+                  <!-- ------------ icons language parts --------------- -->
+                  <div class="row">
+                    <div class="col language">
+                      <h4 class="text-center">UML MOCKUP SCRUM</h4>
+                      <!-- <h5 class="text-center">Angular / React Bootstrap HTML CSS</h5> -->
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </section>
+
+
+    <!-- ************************************ 3rd part PROJECTS ************************************************-->
+      <section id="projects">
+        <div class="projects ">
+          <div  id="cardsProjects" class="d-flex flex-wrap flex-column flex-md-row justify-content-around cardsProjects"></div>           
+        </div>
+      </section>
+
+
+      <!-- ************************************ 4th part EXPERIENCE **********************************************-->
+      <section id="experience">
+
+        <div class="experience ">
+          <div  id="cardEx" class="d-flex flex-wrap flex-column flex-md-row justify-content-around"> </div>
+        </div>
+
+      </section>
+
+
+      <!-- ************************************** 5th part EDUCATION ******************************************-->
+      <section id="education">
+  
+        <div class="education">
+          <div  id="cardEd" class="d-flex flex-wrap justify-content-around"> </div>
+        </div>
+
+      </section>
+
+
+      <!-- *************************************** 6th part FORM *********************************************-->
+      <section id="formulaire">
+        <div class="formulaire">
+          <div class="row justify-content-center">
+            <div class="col-7 col-md-5 col-lg-5">
+              <h3 class="text-center">Contact Me</h3>
+                <form role="form" class="our-form text-center">
+                  <div class="form-group">
+                    <input type="text" class="form-control red-input" id="nameSender" placeholder="Name*" required/>
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="email" placeholder="Email*" required/>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="subject" placeholder="Subject" />
+                  </div>
+                  <div class="form-group">
+                    <textarea id="message" rows="6" class="form-control" placeholder="Message" ></textarea>
+                  </div>
+                  <button id="btnForm" type="submit" class="btn btn-secondary">Send</button>
+                </form>
+            </div>	
+          </div>
+        </div>
+      </section>
+    </div>
+ <!-- *************************************** FOOTER *********************************************-->
+
+
+      <footer class="page-footer ">
+        <div class="container">
+          <!-- Copyright -->
+          <div class="row d-flex justify-content-between">
+            <div class="text-center col-md-8 text-md-left" >
+              <p>&copy Copyright:
+              <a class="scroll_link" href="#links">Izabela Borkowska</a></p>
+            </div>
+            <div class="text-center col-md-4 text-md-right">
+              <p>Updated January 2020</p>
+            </div>
+          </div>
+          <!-- Copyright -->
+        </div>
+      </footer>
+
+
+  </body>
+</html>
