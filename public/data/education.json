@@ -1,22 +1,24 @@
 {"education" : [
     {
+        "year" : "2019 – 2020",
+        "title" : "Web Application Deveoper",
+        "university" : "Interface3",
+        "country" : "Brussels, Belgium"
+    },
+    {
+        "year" : "2006 - 2009",
+        "title" : "Master - Public Relations",
+        "university" : "University of Lower Silesia",
+        "country" : "Wroclaw, Poland"
+    },
+    {
     "year" : "2001 – 2005",
     "title" : "Bachelor, French Language",
     "university" : "Foreign Language Teacher Training College",
     "country" : "Wroclaw, Poland"
-    },
-    {
-    "year" : "2006 - 2009",
-    "title" : "Master - Public Relations",
-    "university" : "University of Lower Silesia",
-    "country" : "Wroclaw, Poland"
-    },
-    {
-    "year" : "2019 – 2020",
-    "title" : "Web Application Deveoper",
-    "university" : "Interface3",
-    "country" : "Brussels, Belgium"
     }
+
+
 
 ]}
 
