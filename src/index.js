@@ -74,8 +74,6 @@ $('body').keyup(function (e) {
   const degreMinus = -20;
 
 
-  //TODO stop drone
-
   // Up arrow key
   if (keyCode === 38 && offset.top - 150 > 0) {
     verticalPosition += 100;
@@ -234,7 +232,8 @@ $('.card-img-top').on('mouseout', function (e) {
 
 
 //------------------ importer json avec fetch --------------------
-fetch('http://www.if3projets.net/wad19/izabela/data/experiences.json')
+// fetch('http://www.if3projets.net/wad19/izabela/data/experiences.json')
+fetch('./data/experiences.json')
   .then((answer) => answer.json())
   .then((data) => {
     const experiences = data.experiences;
@@ -284,7 +283,8 @@ document.addEventListener('scroll', function () {
 //    **************************************  5th part EDUCATION  **************************************
 
 //------------------ importer json avec fetch --------------------
-fetch('http://www.if3projets.net/wad19/izabela/data/education.json')
+// fetch('http://www.if3projets.net/wad19/izabela/data/education.json')
+fetch('./data/education.json')
   .then((answer) => answer.json())
   .then((data) => {
     const studies = data.education;
@@ -334,14 +334,13 @@ btnForm.addEventListener('click', (ev) => {
   Email.send({
     Host : 'smtp.elasticemail.com',
     Username : 'borkowska.wroc@wp.pl',
-    //TODO add password befor putting online
+    //TODO add password before putting online
     Password : '',
     To : 'borkowska.pro@gmail.com',
     From : 'borkowska.wroc@wp.pl',
     Subject : `Email de mon Portfolio, de la part de ${emailS.value}`,
     Body : ` sujet : ${subject.value}, le message est:${message.value}, nom : ${nameSender.value}`,
   })
-    .then(
-      function () { alert('email was sent'); },
-    );
+    .then(function () { alert('email was sent'); });
+    // .then(function () { document.getElementById("form-control").reset(); });
 });
