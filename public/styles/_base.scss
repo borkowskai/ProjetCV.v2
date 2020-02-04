@@ -162,8 +162,8 @@ section#about-me .fa{
 
 
 #droneSpace img{
-  height: 120px;
-  width: 120px;
+  height: 13rem;
+  width: 13rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -347,8 +347,10 @@ footer {
   }
 
   .about-me{
-    .links{
-    justify-content: space-between !important;
+    #links{
+      a{
+        justify-content: space-between !important;
+      }
     }
   }
 }
@@ -365,6 +367,7 @@ footer {
 }
 //less than 900px
 @media(max-width : 900px ){
+
   .projects{
     .cardsProjects{
       .card{
