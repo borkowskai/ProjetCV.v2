@@ -341,6 +341,6 @@ btnForm.addEventListener('click', (ev) => {
     Subject : `Email de mon Portfolio, de la part de ${emailS.value}`,
     Body : ` sujet : ${subject.value}, le message est:${message.value}, nom : ${nameSender.value}`,
   })
-    .then(function () { alert('email was sent'); });
-    // .then(function () { document.getElementById("form-control").reset(); });
+    .then(function () { alert('email was sent'); })
+    .then(function () { document.querySelector(".our-form").reset(); });
 });
