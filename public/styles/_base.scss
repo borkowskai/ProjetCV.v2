@@ -81,13 +81,19 @@ section#about-me,
 //navbar ajustement
 nav{
   background-color:$color1;
+  padding-bottom: 1rem !important;
 
-    a.nav-link{
-    padding-top: 0.7rem;
+  // .navbar{
+  //   min-height: 3rem !important;
+  // }
+
+  a.nav-link{
+    padding-top: 1.2rem !important;
     color:$color5;
     font-size: $sizeStandard;
     display: inline-block;
     padding-right: 3rem;
+
   }
 
   .navbar-toggler-icon{
@@ -173,6 +179,22 @@ section#about-me .fa{
 }
 
 //      *********************    2nd part WEB-DEVELOPEMENT   ************************
+
+// ---------------------    Animation CSS - hand    -------------------------
+.click-animate{
+  width: 3rem;
+  animation-name: clickIcon;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  filter: grayscale(70%);
+}
+
+@keyframes clickIcon {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.5);}
+  100% {transform: scale(1);}
+}
+
 .web-dev{
 
   .elargir{
@@ -218,21 +240,6 @@ section#about-me .fa{
       color: $color1;
     }
   }
-}
-
-// --------------------------  Animation CSS -------------------------------------
-.click-animate{
-  width: 3rem;
-  animation-name: click;
-  animation-iteration-count: infinite;
-  animation-duration: 3s;
-  filter: grayscale(70%);
-}
-
-@keyframes click {
-  0% {transform: scale(1);}
-  50% {transform: scale(1.5);}
-  100% {transform: scale(1);}
 }
 
 
@@ -305,6 +312,8 @@ section#about-me .fa{
   
 footer {
   background-color: $color1;
+  padding-top: 0.6rem !important;
+  padding-bottom: 0.6rem !important;
   p, a, a:visited{
   color:$color5;
   font-size: $sizeStandard;
@@ -341,7 +350,7 @@ footer {
     }
     .active {
       position: absolute;
-      padding-bottom: 40px;
+      padding-bottom: 4rem;
       white-space: normal;
     }
   }

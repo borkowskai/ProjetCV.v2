@@ -152,6 +152,18 @@ $('body').keyup(function (e) {
 // });
 //    ************************************    2nd part WEB-DEV   *****************************************
 
+// ----------------------- add click animation - hand --------------------------------
+$('.elargir').on('mouseover', function (e) {
+  e.preventDefault();
+  $(this).find(".animationSpace").show();
+});
+//mouseout - mouse overpassed
+$('.elargir').on('mouseout', function (e) {
+  e.preventDefault();
+  $(this).find(".animationSpace").hide();
+});
+
+
 $('.elargir').on('click', function (e) {
   e.preventDefault();
   //celui qui n'est pas clique se fait plus petit
@@ -163,13 +175,11 @@ $('.elargir').on('click', function (e) {
   $(this).find(".exterior").hide();
   $(this).find(".interior").show();
 });
-// Michal - data
+
 // ----------------------- button close ----------------------------------
 $('.close').on('click', function (e) {
   e.preventDefault();
-
   console.log($(this));
-
   //const adTarget = $(this)[0].dataset.target;
   const adTarget = $(this).data('target');
   $(`#${adTarget}`).css('width', '50%');
@@ -203,7 +213,7 @@ for (let i = 0; i < 6; i++) {
   $('card-body').attr('id', `project${i}`);
 }
 
-//Michal - nie umiem wejsc jak dodam klase overlay
+//  nie umiem wejsc jak dodam klase overlay
 //  card-img-overlay option to do the background photo
 //<div class="card-img-overlay">
 //<h5 class="card-title">Project</h5>
@@ -341,6 +351,6 @@ btnForm.addEventListener('click', (ev) => {
     Subject : `Email de mon Portfolio, de la part de ${emailS.value}`,
     Body : ` sujet : ${subject.value}, le message est:${message.value}, nom : ${nameSender.value}`,
   })
-    .then(function () { alert('email was sent'); })
-    .then(function () { document.querySelector(".our-form").reset(); });
+    .then(function () { alert('email was sent'); });
+    // .then(function () { document.getElementById("form-control").reset(); });
 });
