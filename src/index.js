@@ -35,13 +35,29 @@ $('.btnDown').click(function () {
   }
 });
 
+//asci art genetator
+
+
 //   ***************    About Me top part  DRONE SPACE    ***************
 const drone = $(
   '<img src="assets/images/icons8-drone3.png" alt="My Favorite Drone" class="drone" id="drone" />',
 );
+const keyboard = $('<img src="assets/images/keyboardPlus.png" alt="arrow keys" style="display: none" id="keyboard" />');
 $('#droneSpace').append(drone);
+$('#droneSpace').prepend(keyboard);
 let verticalPosition = 0;
 let horizontalPostion = 0;
+
+// ----------------------- add keyboard  --------------------------------
+// .one - only once
+$(drone).one('mouseover', function (e) {
+  e.preventDefault();
+  $(keyboard).show("slow");
+});
+$(drone).on('mouseout', function (e) {
+  e.preventDefault();
+  $(keyboard).hide("slow");
+});
 
 
 //   **************  About Me top part MANPULATE DRONE    **************

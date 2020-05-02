@@ -144,9 +144,9 @@ section#about-me .fa{
   p{
     font-size: $sizeStandard;
   }
-  .texte{
-    // margin-bottom: 60vh;
-  }
+  // .texte{
+  //    margin-bottom: 60vh;
+  // }
   .icons{
     // transform: translateY(70%);
     padding-right: 2%;
@@ -160,22 +160,32 @@ section#about-me .fa{
     justify-content: space-around;
     align-items: center;
   }
-  a:not(:first-of-type){
+  // a:not(:first-of-type){
   
-  }
+  // }
 } 
 
 
 
-#droneSpace img{
+#drone{
   height: 12rem;
   width: 12rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  padding-top: 0rem;
   //TODO unblock 
   // box-shadow: 3px 3px 6px $color1;
+}
+#keyboard {
+  display: block;
+  margin-left: 55%;
+  position: relative;
+  filter: opacity(50%);
+  // //color: $colorBlueLight;
+  // filter: contrast(160%);
+  padding-bottom: 0rem;
 }
 
 //      *********************    2nd part WEB-DEVELOPEMENT   ************************
