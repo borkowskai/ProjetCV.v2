@@ -154,7 +154,7 @@ $('body').keyup(function (e) {
   }
 });
 
-// ---------------- added on scroll -------------------------------------
+// ---------------- drone added on scroll -------------------------------------
 const dronePositionBase = $('#drone').offset().top;
 $(document).on('scroll', function (e) {
   e.preventDefault();
@@ -346,7 +346,7 @@ document.addEventListener('scroll', function () {
 //    *******************    button scroll to Top    ************************
 $(document).on('scroll', function (e) {
   e.preventDefault();
-  if (window.window.pageYOffset > 450) {
+  if (window.pageYOffset > 450) {
     $(".backToTop").css("display", "block");
   } else {
     $(".backToTop").css("display", "none");
@@ -354,11 +354,10 @@ $(document).on('scroll', function (e) {
 });
 
 const position = $("#about-me").offset().top;
-const droneBasePosition = $("#droneSpace").offset().top;
+const droneUp = ($("#drone").offset().top) - ($("#droneSpace").offset().top);
 $(".backToTop").on('click', function () {
       $("HTML, BODY").animate({ scrollTop: position }, 1000);
-      console.log(droneBasePosition);
-      $('#drone').animate({ scrollTop: `${droneBasePosition}px` }, 100);
+      $('#drone').animate({ top: `${droneUp}px` }, 1000);
 });
 //    ******************************************    FOOTER    ******************************************
 
