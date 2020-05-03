@@ -36,13 +36,24 @@ $('.btnDown').click(function () {
 });
 
 
-// ----------------------- button scroll to Top ----------------------------------
-$(".backToTop").click(function () {
-    const position = $("#about-me").offset().top;
-    $("HTML, BODY").animate({
+//    *******************    button scroll to Top    ************************
+$(document).on('scroll', function (e) {
+  e.preventDefault();
+  console.log(window.window.pageYOffset);
+  if (window.window.pageYOffset > 450) {
+    $(".backToTop").css("display", "block");
+  } else {
+    $(".backToTop").css("display", "none");
+  }
+});
+
+const position = $("#about-me").offset().top;
+$(".backToTop").on('click', function () {
+      $("HTML, BODY").animate({
         scrollTop: position,
     }, 1000);
 });
+
 //asci art genetator
 
 
@@ -160,11 +171,15 @@ $('body').keyup(function (e) {
 });
 
 // ---------------- added on scroll -------------------------------------
-$(document).scroll(function (e) {
+$(document).on('scroll', function (e) {
   e.preventDefault();
-  verticalPosition -= 8;
 
-  $('#drone').animate({ bottom: `${verticalPosition}px` }, 10);
+  verticalPosition = window.pageYOffset;
+ const scrollTop = drone.offset();
+ // console.log(`window.pageYOffset: ${window.pageYOffset}`);
+//  console.log(`scrollTop: ${scrollTop}`);
+
+  $('#drone').animate({ bottom: verticalPosition }, 500);
 });
 
 

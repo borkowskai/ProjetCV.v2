@@ -64,17 +64,23 @@ section#about-me,
 }
 
 .backToTop{
-  
-	font-size: 0.8em;
+  display: none;
 	color: white;
-	background-color: #32c5d2;
+  background-color: $color3;
+  outline: none;
+  border: none;
 	border-radius: 50%;
-	width: 40px;
-	height: 40px;
-  position: absolute; right: 30px;
+	width: 3rem;
+	height: 3rem;
+  position: fixed;
+  top: 83%;
+  left: 95%;
 
   i{
-    font-size: 1.25rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
