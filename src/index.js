@@ -36,38 +36,20 @@ $('.btnDown').click(function () {
 });
 
 
-//    *******************    button scroll to Top    ************************
-$(document).on('scroll', function (e) {
-  e.preventDefault();
-  console.log(window.window.pageYOffset);
-  if (window.window.pageYOffset > 450) {
-    $(".backToTop").css("display", "block");
-  } else {
-    $(".backToTop").css("display", "none");
-  }
-});
-
-const position = $("#about-me").offset().top;
-$(".backToTop").on('click', function () {
-      $("HTML, BODY").animate({
-        scrollTop: position,
-    }, 1000);
-});
-
 //asci art genetator
 
 
 //   ***************    About Me top part  DRONE SPACE    ***************
-
-
 const drone = $(
   '<img src="assets/images/icons8-drone3.png" alt="My Favorite Drone" class="drone" id="drone" />',
 );
-const keyboard = $('<img src="assets/images/keyboardPlus.png" alt="arrow keys" style="display: none" id="keyboard" />');
+// ----------------------- add keyboard to drone  --------------------------------
+const keyboard = $(
+  '<img src="assets/images/keyboardPlus.png" alt="arrow keys" style="display: none" id="keyboard" />',
+);
 $('#droneSpace').append(drone);
 $('#droneSpace').prepend(keyboard);
 
-// ----------------------- add keyboard to drone  --------------------------------
 // .one - only once
 $(drone).one('mouseover', function (e) {
   e.preventDefault();
@@ -107,6 +89,7 @@ $('body').keyup(function (e) {
   // e.which is set by jQuery for those browsers that do not normally support e.keyCode.
   const keyCode = e.keyCode || e.which;
   const offset = $('#drone').offset();
+  //console.log(`offset Drone ${offset.top}`);
   const degre = 20;
   const degreBase = 0;
   const degreMinus = -20;
@@ -114,6 +97,7 @@ $('body').keyup(function (e) {
 
   // Up arrow key
   if (keyCode === 38 && offset.top - 150 > 0) {
+    //console.log(`droneOffsetTop ${offset.top}`);
     verticalPosition += 100;
     $('#drone')
       .css({
@@ -173,13 +157,12 @@ $('body').keyup(function (e) {
 // ---------------- added on scroll -------------------------------------
 $(document).on('scroll', function (e) {
   e.preventDefault();
+  const windowScrollY = Math.round(window.scrollY);
 
-  verticalPosition = window.pageYOffset;
- const scrollTop = drone.offset();
- // console.log(`window.pageYOffset: ${window.pageYOffset}`);
-//  console.log(`scrollTop: ${scrollTop}`);
-
-  $('#drone').animate({ bottom: verticalPosition }, 500);
+  //console.log(windowScrollY);
+  // if (windowScrollY - 270 < ($(window).height())) {
+    $('#drone').animate({ top: `${windowScrollY}px` }, 100);
+  //}
 });
 
 
@@ -354,6 +337,25 @@ document.addEventListener('scroll', function () {
       top: 0,
     }, 1000);
   }
+});
+
+
+//    *******************    button scroll to Top    ************************
+$(document).on('scroll', function (e) {
+  e.preventDefault();
+  if (window.window.pageYOffset > 450) {
+    $(".backToTop").css("display", "block");
+  } else {
+    $(".backToTop").css("display", "none");
+  }
+});
+
+const position = $("#about-me").offset().top;
+const droneBasePosition = $("#droneSpace").offset().top;
+$(".backToTop").on('click', function () {
+      $("HTML, BODY").animate({ scrollTop: position }, 1000);
+      console.log(droneBasePosition);
+      $('#drone').animate({ scrollTop: `${droneBasePosition}px` }, 100);
 });
 //    ******************************************    FOOTER    ******************************************
 
