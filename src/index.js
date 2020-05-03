@@ -179,7 +179,7 @@ $('.elargir').on('mouseout', function (e) {
   $(this).find(".animationSpace").hide();
 });
 
-
+// ----------------------- add openning  --------------------------------
 $('.elargir').on('click', function (e) {
   e.preventDefault();
   //celui qui n'est pas clique se fait plus petit
@@ -192,17 +192,20 @@ $('.elargir').on('click', function (e) {
   $(this).find(".interior").show();
 });
 
-// ----------------------- button close ----------------------------------
-$('.close').on('click', function (e) {
+// ----------------------- add closure  --------------------------------
+// ----------------------- button close --------------------------------
+
+const closure = function (e) {
   e.preventDefault();
-  console.log($(this));
-  //const adTarget = $(this)[0].dataset.target;
   const adTarget = $(this).data('target');
   $(`#${adTarget}`).css('width', '50%');
   $(`#${adTarget}`).find(".interior").hide();
   $(`#${adTarget}`).find(".exterior").show();
   e.stopPropagation();
-});
+};
+// calling the same data* - reference to the same id
+$('.interior').on('click', closure);
+$('.close').on('click', closure);
 
 
 //not working
