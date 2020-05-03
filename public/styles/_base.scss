@@ -63,6 +63,21 @@ section#about-me,
   padding-top: $spaceTopHigh;
 }
 
+.backToTop{
+  
+	font-size: 0.8em;
+	color: white;
+	background-color: #32c5d2;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+  position: absolute; right: 30px;
+
+  i{
+    font-size: 1.25rem;
+  }
+}
+
 // .container2{
 //   width: 100%;
 //   margin: 0 auto;
@@ -175,6 +190,7 @@ section#about-me .fa{
   margin-right: auto;
   position: relative;
   padding-top: 0rem;
+  z-index: 10;
   //TODO unblock 
   // box-shadow: 3px 3px 6px $color1;
 }
@@ -192,6 +208,7 @@ section#about-me .fa{
 
 // ---------------------    Animation CSS - hand    -------------------------
 .click-animate{
+  padding-top: 4rem;
   width: 3rem;
   animation-name: clickIcon;
   animation-iteration-count: infinite;

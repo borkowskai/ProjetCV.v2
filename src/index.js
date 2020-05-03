@@ -35,20 +35,28 @@ $('.btnDown').click(function () {
   }
 });
 
+
+// ----------------------- button scroll to Top ----------------------------------
+$(".backToTop").click(function () {
+    const position = $("#about-me").offset().top;
+    $("HTML, BODY").animate({
+        scrollTop: position,
+    }, 1000);
+});
 //asci art genetator
 
 
 //   ***************    About Me top part  DRONE SPACE    ***************
+
+
 const drone = $(
   '<img src="assets/images/icons8-drone3.png" alt="My Favorite Drone" class="drone" id="drone" />',
 );
 const keyboard = $('<img src="assets/images/keyboardPlus.png" alt="arrow keys" style="display: none" id="keyboard" />');
 $('#droneSpace').append(drone);
 $('#droneSpace').prepend(keyboard);
-let verticalPosition = 0;
-let horizontalPostion = 0;
 
-// ----------------------- add keyboard  --------------------------------
+// ----------------------- add keyboard to drone  --------------------------------
 // .one - only once
 $(drone).one('mouseover', function (e) {
   e.preventDefault();
@@ -80,6 +88,9 @@ $(drone).on('mouseout', function (e) {
 //     poisson.fadeIn(5000);
 //   }
 // }, 10);
+
+let verticalPosition = 0;
+let horizontalPostion = 0;
 
 $('body').keyup(function (e) {
   // e.which is set by jQuery for those browsers that do not normally support e.keyCode.
@@ -149,23 +160,14 @@ $('body').keyup(function (e) {
 });
 
 // ---------------- added on scroll -------------------------------------
-// $(window).scroll(function () {
-//   // e.which is set by jQuery for those browsers that do not normally support e.keyCode.
-//   const degre = 20;
-//   const degreBase = 0;
+$(document).scroll(function (e) {
+  e.preventDefault();
+  verticalPosition -= 8;
+
+  $('#drone').animate({ bottom: `${verticalPosition}px` }, 10);
+});
 
 
-//   verticalPosition += 100;
-//     $('#drone')
-//       .css({
-//         transform: `rotate(${degre}deg)`,
-//       })
-//       .animate({ bottom: `${verticalPosition}px` }, 300, () => {
-//         $('#drone').css({
-//           transform: `rotate(${degreBase}deg)`,
-//         });
-//       });
-// });
 //    ************************************    2nd part WEB-DEV   *****************************************
 
 // ----------------------- add click animation - hand --------------------------------
