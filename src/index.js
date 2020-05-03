@@ -155,16 +155,16 @@ $('body').keyup(function (e) {
 });
 
 // ---------------- added on scroll -------------------------------------
+const dronePositionBase = $('#drone').offset().top;
 $(document).on('scroll', function (e) {
   e.preventDefault();
   const windowScrollY = Math.round(window.scrollY);
+  const documentHeight = $(document).height();
 
-  //console.log(windowScrollY);
-  // if (windowScrollY - 270 < ($(window).height())) {
+  if ((windowScrollY - dronePositionBase) < documentHeight) {
     $('#drone').animate({ top: `${windowScrollY}px` }, 100);
-  //}
+  }
 });
-
 
 //    ************************************    2nd part WEB-DEV   *****************************************
 
