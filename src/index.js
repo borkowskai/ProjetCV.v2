@@ -59,6 +59,10 @@ $(drone).on('mouseout', function (e) {
   e.preventDefault();
   $(keyboard).hide("slow");
 });
+$(drone).on('click', function (e) {
+  e.preventDefault();
+  $(keyboard).show("slow");
+});
 
 
 //   **************  About Me top part MANPULATE DRONE    **************
