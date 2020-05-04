@@ -26,6 +26,7 @@ $colorBlueLight:#225381;
 $sizeStandard: 1.25rem;
 $sizeMiddle : 1.4rem;
 $sizeBigger: 2.2rem;
+$sizeExtraBig: 2.7rem;
 
 a, a:visited{ 
   text-decoration: none; 
@@ -238,6 +239,7 @@ section#about-me .fa{
     margin: 0 2rem 0 0;
     // overflow ce qui est au dehors du cible / div -->
     // overflow: hidden;  
+
   }
   .exterior{
     text-align: center;
@@ -246,9 +248,10 @@ section#about-me .fa{
     font-size: $sizeMiddle;
     height: 500px; 
     i{
-      font-size: $sizeBigger;
+      font-size: $sizeExtraBig;
+      padding-bottom: $sizeBigger;
     }
-    //img est click
+    //img represente click
     img{
       margin-top: 2rem;
     }
@@ -265,10 +268,19 @@ section#about-me .fa{
     p{
       font-size: $sizeMiddle;
     }
+    h3{
+      font-size: $sizeBigger;
+    }
     .language{
       padding-top: $spaceTopSmall;
       h4, h5{
         padding-top: $sizeStandard;
+      }
+      img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
       }
     }
     #btnClose{
@@ -325,7 +337,8 @@ section#about-me .fa{
     margin-bottom: 2rem;
     font-size: $sizeMiddle;
     h5{
-      font-size: $sizeBigger;
+      font-size: $sizeMiddle;
+      font-weight: 700;
     }
   }
 
