@@ -7,7 +7,7 @@
 //     ************************   GENERAL  ************************************ 
 html, body{
   font-size : 62.5%; /* pour faciliter les calcules on fait partir a 10px*/
- }
+   }
 
 // ------------- variables -----------
 //space
@@ -56,6 +56,7 @@ section#about-me,
   // comment faire pour avoir l'espace quand on clique =>js
 .about-me{
   padding-top: $spaceTop;
+  cursor: url(assets/images/keyboardPlus.png), auto;
 }
 .web-dev,
 .projects,
@@ -63,6 +64,7 @@ section#about-me,
 .education,
 .formulaire{
   padding-top: $spaceTopHigh;
+  cursor: url(assets/images/keyboardPlus.png), auto;
 }
 
 .backToTop{
@@ -276,11 +278,12 @@ section#about-me .fa{
       h4, h5{
         padding-top: $sizeStandard;
       }
+      // image des competences 
       img{
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 90%;
+        width: 80%;
       }
     }
     #btnClose{
@@ -495,6 +498,11 @@ footer {
       }
       .interior{
         height: 300px; 
+        .language{
+          img{
+            width: 90%;
+          }
+        }
       }
     }
   }
